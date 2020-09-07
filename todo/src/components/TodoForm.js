@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from 'react'
+import React, { useState, useReducer, useEffect } from 'react'
 import { initialState, reducer } from '../reducers/TodoReducers'
 
 
@@ -12,7 +12,12 @@ function TodoForm(){
        setTask(e.target.value)
       }
 
-  
+
+    const handleSubmit = () => {
+    dispatch({type: 'ADD_TODO', payload: task})
+    setTask('')
+    }
+    
 
       return(
           <div className="form-container">
@@ -25,7 +30,7 @@ function TodoForm(){
                   </input>
               <div>
                 <button 
-                onClick={()=>{dispatch({type: 'ADD_TODO', payload: task})}}>Add to List</button>
+                onClick={handleSubmit}>Add to List</button>
               </div>
           </div>
           <div className="clear">
