@@ -20,30 +20,38 @@ function TodoForm(){
     
 
       return(
-          <div className="form-container">
-          <div>
-                  <input 
+      <div className="background">
+         <div className="mainC">
+            <div className="interfaceC">
+               <input 
                    name = "name"
                    type = "text"
                    value = {task}
                    onChange = {handleInput}>
                   </input>
-              <div>
-                <button 
-                onClick={handleSubmit}>Add to List</button>
-              </div>
-          </div>
-          <div className="clear">
-            <button onClick={()=>{dispatch({type: "CLEAR_COMPLETED"})}}>Clear Completed</button>
-          </div>
+               <div>
+               <button className="add" onClick={handleSubmit}>Add to List</button>
+                <button className="clear" onClick={()=>{dispatch({type: "CLEAR_COMPLETED"})}}>Clear Completed</button>
+               </div>
+            </div>
+
+            <div className="tasks">
             {
                 state.map((task)=>{
-                    return <div onClick={()=>{dispatch({type: "TOGGLE_DONE", id: task.id})}}>
+                    return <div className="task" style = {task.done?{textDecoration : "line-through"}: null}
+                    onClick={()=>{dispatch({type: "TOGGLE_DONE", id: task.id})}}>
+                    
                     {task.name}
+                        
+                    
                 </div>
                 })
             }
-          </div>
+            </div>
+            
+         </div>
+      </div>
+        
       )
   }
 
