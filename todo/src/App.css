@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border;
+  font-size: 18px;
+  font-family: 'Long Cang', cursive;
+}
+
+.background{
+  height: 100vh;
+  background-color: #98A7C6;
+  display: flex;
+}
+
+.mainC{
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  width: 800px;
+  margin: 0 auto;
+  background-image: url("https://cdn.hipwallpaper.com/i/34/85/9TWbka.jpg");
+
+}
+
+.interfaceC{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+input{
+  padding: 5px;
+}
+
+button{
+  padding: 5px;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 9px 18px rgba(0,0,0,0.30), 0 5px 2px rgba(0,0,0,0.22);
+  outline: none;
+  border-radius: 15px;
+  font-family: sans-serif;
+}
+
+.add{
+  background-color: green
+  
+}
+
+.clear{
+  background-color: red;
+}
+
+.tasks{
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.task{
+  width: 300px;
+  padding: 5px;
+  font-size: 25px;
+  margin: 10px;
+  box-shadow: 0 9px 18px rgba(0,0,0,0.30), 0 5px 2px rgba(0,0,0,0.22);
+  cursor: pointer;
+  background-color: yellow;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
